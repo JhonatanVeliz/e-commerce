@@ -21,6 +21,7 @@ li{
 }
 button{
     cursor: pointer;
+    border: none;
 }
 .navegacion{
     padding: 2.5rem 0;
@@ -198,15 +199,9 @@ button{
     border-radius: .5rem;
     color: var(--colo-white);
 }
-.card__btn--blue{
-    background-color: #1662e4;
-}
 .card__btn--brown{
     background-color: #222;
     flex: 1;
-}
-.card__btn--red{
-    background-color: #cf1c1c;
 }
 .card__footer__quantity{
     padding: 1rem 1.5rem;
@@ -238,4 +233,68 @@ button{
     background-color: var(--color-brown);
     color: var(--colo-white);
     font-size: 1.8rem;
+}
+/* Carrito */
+.btn--cart{
+    border: none;
+    max-width: 6rem;
+}
+.products__carrito{
+    position: relative;
+}
+.products__carrito__button{
+    position: relative;
+}
+.products__carrito__button__cantidad{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .5rem;
+    background-color: rgb(26, 154, 26);
+    color: var(--colo-white);
+    border-radius: .5rem;
+    font-size: 1.5rem;
+}
+.products__carrito__container-item{
+    padding: 1.5rem;
+    border: .5rem;
+    background-color: #222;
+    position: absolute;
+    top: 5.5rem;
+    right: 0;
+    width: 30rem;
+    text-wrap: nowrap;
+    color: var(--colo-white);
+    border-radius: .5rem;
+}
+.products__carrito__item{
+    display: flex;
+    gap: .5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.products__carrito__items__img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.products__carrito__item__btns{
+    display: flex;
+    gap: .5rem;
+}
+/* Botones */
+.btn{
+    color: var(--colo-white);
+    padding: .5rem;
+    border-radius: .3rem;
+}
+.btn--red{
+    background-color: #cf1c1c;
+}
+.btn--orange{
+    background-color: #ec440b;
+}
+.btn--blue{
+    background-color: #1662e4;
 }

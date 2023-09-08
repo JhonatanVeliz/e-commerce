@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 import Card from "./Card.jsx";
+import Cart from "./Cart.jsx";
 import { getApi } from "../helpers/index.js";
 
 import taza_1 from "../assets/taza-1.jpg";
 import taza_2 from "../assets/taza-2.jpg";
 import taza_3 from "../assets/taza-3.jpg";
 import taza_4 from "../assets/taza-4.jpg";
-import carrito from "../assets/cart.png";
 
 const initialState = [
     {
@@ -41,6 +41,8 @@ const Products = ({ setAllProducts }) => {
   const [ products, setProducts ] = useState(initialState);
   const [ get, setGet ] = useState(false);
 
+  const [ productsFromCart, setProductsFromCart ] = useState([]);
+
   const getProductos = async ()=>{
 
     try {
@@ -58,7 +60,9 @@ const Products = ({ setAllProducts }) => {
         <header className="products__header">
             <h2 className='title products__title'>Productos</h2>
 
-            <img src={carrito} alt="" />
+            <Cart productsFromCart={productsFromCart} 
+                  setProductsFromCart={setProductsFromCart}
+            />
         </header>
 
         <div className="products__cards">
@@ -71,7 +75,6 @@ const Products = ({ setAllProducts }) => {
                     />
                 ))
             }
-
         </div>
 
         <div className="products__mas">

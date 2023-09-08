@@ -13,18 +13,10 @@ const App = () => {
 
   return (
     <>
-
-      {
-        allProducts.length > 1  
-        ? ''
-        : <>
-            <Nav/>
-            <Heroe />
-            <Presentation />
-            <Products setAllProducts={setAllProducts} fixed={fixed}/>
-          </>
-      }
-
+      <Nav />
+      <Heroe />
+      <Presentation />
+      <Products setAllProducts={setAllProducts} fixed={fixed} />
       <Footer />
     </>
   )
