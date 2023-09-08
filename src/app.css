@@ -8,17 +8,40 @@ body{
     background-color: var(--colo-white);
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
+.body--top{
+    padding-top: 15rem;
+}
 .container{
     margin: 0 auto;
-    width: 85%;
+    width: 90%;
     max-width: 1400px;
 }
 li{
     list-style: none;
 }
+button{
+    cursor: pointer;
+}
 .navegacion{
-    padding: 2.5rem;
+    padding: 2.5rem 0;
     background-color: var(--color-black);
+    z-index: 20;
+    position: static;
+}
+.navegacion__fixed{
+    animation: fijar .5s alternate forwards;
+    transition: .5s linear;
+    position: fixed;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    opacity: 0;
+}
+@keyframes fijar {
+    to{
+        top: 0;
+        opacity: 1;
+    }
 }
 .nav{
     display: flex;
@@ -49,13 +72,15 @@ li{
 /* Heroe */
 .heroe{
     width: 100%;
-    height: 85vh;
+    height: 110vh;
+    margin-top: -15rem;
     background: url(./assets/heroe.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    z-index: -1;
 }
 .heroe::before{
     content: 'Los Mejores Sabores';
@@ -76,13 +101,15 @@ li{
 
 }
 /* presentation */
-.presentation{
-    padding: 5rem 0;
-    display: flex;
-    gap: 3rem;
-    align-items: center;
+.section{
+    padding-top: 10rem;
 }
-.presentation__title{
+.presentation{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.presentation__title, .products__title{
     padding-bottom: 1rem;
     margin-bottom: 2rem;
     border-bottom: 1rem solid var(--color-brown);
@@ -110,4 +137,105 @@ li{
     display: grid;
     place-content: center;
     transition: .3s linear;
+}
+/* Productos */
+.products__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.products__title{
+    color: #3e3e3e;
+    border-bottom: 1rem solid #3e3e3e;
+}
+.products__cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    grid-auto-flow: dense;
+    place-content: center;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+.card{
+    grid-column: span 1;
+    max-width: 30rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 1px 1rem #0000003b;
+}
+.card__img{
+    width: 100%;
+    object-fit: cover;
+    height: 15rem;
+    border-radius: .5rem;
+}
+.card__text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    font-size: 2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+}
+.card__text__title{
+    font-weight: 500;
+}
+.card__text__price{
+    font-weight: 700;
+}
+.card__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+.card__btn{
+    padding: 1rem;
+    border: none;
+    border-radius: .5rem;
+    color: var(--colo-white);
+}
+.card__btn--blue{
+    background-color: #1662e4;
+}
+.card__btn--brown{
+    background-color: #222;
+    flex: 1;
+}
+.card__btn--red{
+    background-color: #cf1c1c;
+}
+.card__footer__quantity{
+    padding: 1rem 1.5rem;
+    background-color: rgb(17, 97, 227);
+    color: var(--colo-white);
+    border-radius: .5rem;
+}
+/* Footer */
+.footer{
+    background-color: var(--color-black);
+    padding: 4rem 0;
+    margin-top: 6rem;
+}
+.footer__paragraph{
+    font-size: 2.5rem;
+    color: var(--colo-white);
+    font-weight: 300;
+}
+.products__mas{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+.btn--mas{
+    width: 20rem;
+    padding: 1.5rem;
+    border: none;
+    background-color: var(--color-brown);
+    color: var(--colo-white);
+    font-size: 1.8rem;
 }

@@ -1,11 +1,14 @@
 import React from 'react';
+import { fixedComponent } from "../helpers/index.js";
 
 import imgPresentation from "../assets/presentation.jpg";
 
 const Presentation = () => {
 
+    window.addEventListener('scroll', () => fixedComponent(document.body, document.documentElement.scrollTop));
+
     return (
-        <section className='container presentation' id='about'>
+        <section className='container section presentation' id='about'>
 
             <article>
 

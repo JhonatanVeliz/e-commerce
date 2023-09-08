@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import useLink from "../hooks/useLink";
 
-const Nav = () => {
+const Nav = ({ fixed, setFixed }) => {
 
   const [ _, Title ] = useLink('./', 'Un Café')
 
