@@ -5,7 +5,7 @@ import imgPresentation from "../assets/presentation.jpg";
 
 const Presentation = () => {
 
-    window.addEventListener('scroll', () => fixedComponent(document.body, document.documentElement.scrollTop));
+    window.addEventListener('scroll', fixedComponent);
 
     return (
         <section className='container section presentation' id='about'>

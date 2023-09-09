@@ -6,8 +6,8 @@ const Cart = ({ productsFromCart, setProductsFromCart }) => {
 
     const [appearCar, setAppearCar] = useState(false);
 
-    const handleClickCart = () => setAppearCar(!appearCar);    
-
+    const handleClickCart = () => setAppearCar(!appearCar);   
+    
     return (
         <div className="products__carrito">
 
@@ -17,7 +17,9 @@ const Cart = ({ productsFromCart, setProductsFromCart }) => {
                     <img src={carrito} alt="icono del carrito" />
                 </button>
 
-                <span className='products__carrito__button__cantidad'></span>
+                <span className='products__carrito__button__cantidad'>
+                    {productsFromCart.length || 0}
+                </span>
             </div>
 
             { appearCar && 

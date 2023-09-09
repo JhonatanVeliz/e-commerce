@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Card from "./Card.jsx";
 import Cart from "./Cart.jsx";
-import { getApi } from "../helpers/index.js";
+import { getApi, generatorId } from "../helpers/index.js";
 
 import taza_1 from "../assets/taza-1.jpg";
 import taza_2 from "../assets/taza-2.jpg";
@@ -54,6 +54,11 @@ const Products = ({ setAllProducts }) => {
     } catch (error) {console.error(error);}
   }
 
+  const addProductCart = dataProduct => {
+    dataProduct.id = generatorId();
+    setProductsFromCart( product => [...product, dataProduct])
+  }
+
   return (
     <section className='container section products' id='products'>
 
@@ -72,6 +77,8 @@ const Products = ({ setAllProducts }) => {
                           img={producto.img}
                           title={producto.title}
                           price={producto.price}
+                          id={producto.id}
+                          addProductCart={addProductCart}
                     />
                 ))
             }

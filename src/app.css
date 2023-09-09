@@ -175,7 +175,7 @@ button{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     font-size: 2rem;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -194,20 +194,18 @@ button{
     gap: .5rem;
 }
 .card__btn{
-    padding: 1rem;
+    padding: 1.5rem;
     border: none;
     border-radius: .5rem;
     color: var(--colo-white);
 }
-.card__btn--brown{
+.card__btn--black{
     background-color: #222;
     flex: 1;
 }
-.card__footer__quantity{
-    padding: 1rem 1.5rem;
-    background-color: rgb(17, 97, 227);
-    color: var(--colo-white);
-    border-radius: .5rem;
+.card__btn--black:active{
+    background-color: #121212;
+    flex: 1;
 }
 /* Footer */
 .footer{
@@ -262,25 +260,30 @@ button{
     position: absolute;
     top: 5.5rem;
     right: 0;
-    width: 30rem;
-    text-wrap: nowrap;
+    min-width: 20rem;
+    width: auto;
     color: var(--colo-white);
     border-radius: .5rem;
+    text-align: center;
+    display: grid;
+    gap: 1.5rem;
 }
 .products__carrito__item{
     display: flex;
     gap: .5rem;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 .products__carrito__items__img{
     width: 5rem;
     height: 5rem;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: .5rem;
 }
 .products__carrito__item__btns{
+    width: 20rem;
     display: flex;
+    justify-content: flex-end;
     gap: .5rem;
 }
 /* Botones */

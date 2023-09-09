@@ -1,13 +1,19 @@
-const fixedComponent = (nodo, screenY) => {
+const nodo = document.body;
 
+const fixedComponent = () => {
+    
+    const screenY = window.scrollY;
     const scroll = Math.floor(screenY);
-    const nav = document.querySelector('.navegacion');
+
+    if(scroll < 590) return
 
     if (scroll > 605) {
+        const nav = document.querySelector('.navegacion');
         nodo.classList.add('body--top');
         nav.classList.add('navegacion__fixed')
     }
     if (scroll < 605) {
+        const nav = document.querySelector('.navegacion');
         nav.classList.contains('navegacion__fixed')
             ? (nav.classList.remove('navegacion__fixed'), nodo.classList.remove('body--top'))
             : null
@@ -24,7 +30,13 @@ const getApi = async (url) => {
     return json;
 }
 
+const generatorId = () => {
+    const date = Date.now();
+    return String(date).slice(-5);
+}
+
 export {
     fixedComponent,
-    getApi
+    getApi,
+    generatorId
 }
