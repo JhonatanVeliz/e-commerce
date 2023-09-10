@@ -236,6 +236,7 @@ button{
 .btn--cart{
     border: none;
     max-width: 6rem;
+    background-color: transparent;
 }
 .products__carrito{
     position: relative;

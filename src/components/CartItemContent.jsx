@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CartItemContent = ({ img, title, id }) => {
+const CartItemContent = ({ img, title, id, product, deleteProduct }) => {
   return (
 
     <div className="products__carrito__item">
@@ -12,7 +12,11 @@ const CartItemContent = ({ img, title, id }) => {
       <div className="products__carrito__item__btns">
         <button className='btn btn--blue'>+1</button>
         <button className='btn btn--orange'>-1</button>
-        <button className='btn btn--red'>Eliminar</button>
+        <button className='btn btn--red'
+          onClick={()=> deleteProduct(product)}
+        >
+          Eliminar
+        </button>
       </div>
 
     </div>
