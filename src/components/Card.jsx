@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 const Card = ({img, title, price, id, addProductCart }) => {
 
-  const handleQuantity = () => {
+  const handleAddProduct = () => {
     addProductCart({ img, title, price });
   }
 
@@ -20,7 +20,7 @@ const Card = ({img, title, price, id, addProductCart }) => {
 
       <div className="card__footer">
         <button className='card__btn card__btn--black'
-          onClick={handleQuantity}
+          onClick={handleAddProduct}
         >Agregar
         </button>
       </div>

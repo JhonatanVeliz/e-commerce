@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Card from "./Card.jsx";
 import Cart from "./Cart.jsx";
@@ -56,8 +56,12 @@ const Products = ({ setAllProducts }) => {
 
   const addProductCart = dataProduct => {
     dataProduct.id = generatorId();
-    setProductsFromCart( product => [...product, dataProduct])
+    setProductsFromCart( product => [...product, dataProduct]);
   }
+
+  useEffect(()=>{
+    setAllProducts(productsFromCart);
+  }, [productsFromCart])
 
   return (
     <section className='container section products' id='products'>

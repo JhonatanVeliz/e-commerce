@@ -5,7 +5,7 @@ const fixedComponent = () => {
     const screenY = window.scrollY;
     const scroll = Math.floor(screenY);
 
-    if(scroll < 590) return
+    if(scroll < 500) return
 
     if (scroll > 605) {
         const nav = document.querySelector('.navegacion');
