@@ -28,6 +28,12 @@ const CartItem = ({ productsFromCart, setProductsFromCart }) => {
           ))
           : <p>No hay nada en carrito</p>
       }
+      
+      {
+        productsFromCart.length > 0 
+        ? <a href='#buy' className='btn btn--buy'>Comprar</a>
+        : null
+      }
     </div>
 
   )

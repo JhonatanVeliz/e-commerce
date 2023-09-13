@@ -1,6 +1,6 @@
 import React from "react";
 
-const BuyItem = ({ product }) => {
+const BuyItem = ({ product, deleteProduct }) => {
 
   const { img, title, price } = product;
 
@@ -8,8 +8,10 @@ const BuyItem = ({ product }) => {
     <div className="buy__item">
       <img src={img} alt="imagen del producto" className="buy__item__img" />
       <span> {title} </span>
-      <strong> {price} </strong>
-      <button className="btn buy__btn btn--red">Eliminar</button>
+      <strong>Q {price}.00</strong>
+      <button className="btn buy__btn btn--red"
+        onClick={()=> deleteProduct(product)}
+      >Eliminar</button>
     </div>
   );
 };

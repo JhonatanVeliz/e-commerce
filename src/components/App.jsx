@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Nav from "./Nav";
 import Heroe from "./Heroe";
@@ -11,6 +11,7 @@ const App = () => {
 
   const [allProducts, setAllProducts] = useState([]);
   const [fixed, setFixed] = useState(false);
+  const [priceTotal, setPriceTotal] = useState(0);
 
   return (
     <>
@@ -18,7 +19,11 @@ const App = () => {
       <Heroe />
       <Presentation />
       <Products setAllProducts={setAllProducts} fixed={fixed} />
-      <Buy allProducts={allProducts} setAllProducts={setAllProducts} />
+      <Buy allProducts={allProducts} 
+           setAllProducts={setAllProducts} 
+           priceTotal={priceTotal}
+           setPriceTotal={setPriceTotal}
+      />
       <Footer />
     </>
   )

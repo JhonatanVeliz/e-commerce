@@ -309,6 +309,7 @@ button{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "product product buy";
+    gap: 1.5rem;
 }
 .buy__items-container{
     grid-area: product;
@@ -329,4 +330,26 @@ button{
 }
 .buy__item__img{
     max-width: 5rem;
+}
+.btn--buy{
+    background-color: #2c8710;
+    padding: 1rem;
+}
+.buy__pay{
+    padding: 3rem;
+    background-color: var(--color-black);
+    color: var(--colo-white);
+    display: grid;
+    gap: 1.5rem;
+    place-content: center;
+    border-radius: 1rem;
+    max-height: 20rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.buy__pay__btn{
+    background-color: #1662e4;
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
 }

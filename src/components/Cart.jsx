@@ -27,7 +27,7 @@ const Cart = ({ productsFromCart, setProductsFromCart }) => {
                   setProductsFromCart={setProductsFromCart} 
                 /> 
             }
-
+            
         </div>
     )
 }
