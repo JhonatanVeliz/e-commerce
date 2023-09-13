@@ -150,16 +150,20 @@ button{
     border-bottom: 1rem solid #3e3e3e;
 }
 .products__cards{
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
     grid-auto-flow: dense;
     place-content: center;
+    gap: 2rem; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 2rem;
     padding-top: 2rem;
 }
 .card{
-    grid-column: span 1;
-    max-width: 30rem;
+    /* grid-column: span 1; */
+    width: 30rem;
     background-color: #fff;
     padding: 2rem;
     border-radius: 1rem;
@@ -339,11 +343,12 @@ button{
     padding: 3rem;
     background-color: var(--color-black);
     color: var(--colo-white);
-    display: grid;
+    display: flex;
     gap: 1.5rem;
-    place-content: center;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 1rem;
-    max-height: 20rem;
+    max-height: 15rem;
     text-align: center;
     font-size: 2rem;
 }
@@ -352,4 +357,15 @@ button{
     border: none;
     border-radius: .5rem;
     padding: 1rem;
+}
+@media screen and (max-width: 690px) {
+    .products__cards{
+        justify-content: center;
+    }
+    .card{
+        width: 100%;
+    }
+    .card__img{
+        height: 20rem;
+    }
 }

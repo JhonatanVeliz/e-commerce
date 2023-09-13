@@ -9,7 +9,7 @@ import Buy from './Buy';
 
 const App = () => {
 
-  const [allProducts, setAllProducts] = useState([]);
+  const [ productsFromCart, setProductsFromCart ] = useState([]);
   const [fixed, setFixed] = useState(false);
   const [priceTotal, setPriceTotal] = useState(0);
 
@@ -18,9 +18,12 @@ const App = () => {
       <Nav />
       <Heroe />
       <Presentation />
-      <Products setAllProducts={setAllProducts} fixed={fixed} />
-      <Buy allProducts={allProducts} 
-           setAllProducts={setAllProducts} 
+      <Products 
+      productsFromCart={productsFromCart}
+      setProductsFromCart={setProductsFromCart}
+      fixed={fixed} />
+      <Buy productsFromCart={productsFromCart} 
+           setProductsFromCart={setProductsFromCart} 
            priceTotal={priceTotal}
            setPriceTotal={setPriceTotal}
       />

@@ -2,24 +2,24 @@ import React, { useEffect } from 'react';
 
 import BuyItem from "./BuyItem";
 
-const Buy = ({ allProducts, setAllProducts, priceTotal, setPriceTotal }) => {
+const Buy = ({ productsFromCart, setProductsFromCart, priceTotal, setPriceTotal }) => {
 
   const deleteProduct = product =>{
-    const productsUpdate = allProducts.filter( eachProduct => 
+    const productsUpdate = productsFromCart.filter( eachProduct => 
       eachProduct.id != product.id
     );
 
-    setAllProducts(productsUpdate);
+    setProductsFromCart(productsUpdate);
   }
 
   useEffect(()=>{
     let total = 0;
-    allProducts.forEach( ({ price }) => {
+    productsFromCart.forEach( ({ price }) => {
       total += price;
     });
 
     setPriceTotal(total);
-  }, [allProducts])
+  }, [productsFromCart])
 
   return (
     <section className='container buy' id='buy'>
@@ -29,7 +29,7 @@ const Buy = ({ allProducts, setAllProducts, priceTotal, setPriceTotal }) => {
 
         <div className="buy__items-container">
             {
-                allProducts.map( product => (
+                productsFromCart.map( product => (
                     <BuyItem 
                       key={product.id} 
                       product={product} 

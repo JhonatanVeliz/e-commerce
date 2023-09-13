@@ -36,12 +36,12 @@ const initialState = [
     }
 ]
 
-const Products = ({ setAllProducts }) => {
+const Products = ({ productsFromCart, setProductsFromCart }) => {
 
   const [ products, setProducts ] = useState(initialState);
   const [ get, setGet ] = useState(false);
 
-  const [ productsFromCart, setProductsFromCart ] = useState([]);
+  
 
   const getProductos = async ()=>{
 
@@ -60,7 +60,7 @@ const Products = ({ setAllProducts }) => {
   }
 
   useEffect(()=>{
-    setAllProducts(productsFromCart);
+    setProductsFromCart(productsFromCart);
   }, [productsFromCart])
 
   return (
