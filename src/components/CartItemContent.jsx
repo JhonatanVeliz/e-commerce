@@ -10,8 +10,6 @@ const CartItemContent = ({ img, title, id, product, deleteProduct }) => {
       <p>{title}</p>
 
       <div className="products__carrito__item__btns">
-        <button className='btn btn--blue'>+1</button>
-        <button className='btn btn--orange'>-1</button>
         <button className='btn btn--red'
           onClick={()=> deleteProduct(product)}
         >

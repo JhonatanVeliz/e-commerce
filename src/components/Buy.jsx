@@ -12,6 +12,10 @@ const Buy = ({ productsFromCart, setProductsFromCart, priceTotal, setPriceTotal 
     setProductsFromCart(productsUpdate);
   }
 
+  const deleteProductAll = () => {
+      setProductsFromCart([]);
+  };
+
   useEffect(()=>{
     let total = 0;
     productsFromCart.forEach( ({ price }) => {
@@ -43,7 +47,10 @@ const Buy = ({ productsFromCart, setProductsFromCart, priceTotal, setPriceTotal 
             <p>Q { priceTotal }.00</p>
             {
               priceTotal != 0 
-              ? <button className='btn buy__pay__btn'>Comprar</button> 
+              ? <button className='btn buy__pay__btn'
+                  onClick={deleteProductAll}
+                  >Comprar
+                </button> 
               : null
             }
         </div>
