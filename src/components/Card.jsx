@@ -1,5 +1,3 @@
-import React, {useState} from 'react'
-
 const Card = ({img, title, price, id, addProductCart }) => {
 
   const handleAddProduct = () => {

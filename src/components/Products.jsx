@@ -56,6 +56,16 @@ const Products = ({ productsFromCart, setProductsFromCart }) => {
 
   const addProductCart = dataProduct => {
     dataProduct.id = generatorId();
+
+    if(productsFromCart.length > 0){
+        console.log(dataProduct);
+        setProductsFromCart( product => (
+            product.title !== dataProduct.title
+            ? product
+            : dataProduct
+        ));
+    }
+
     setProductsFromCart( product => [...product, dataProduct]);
   }
 

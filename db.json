@@ -1,49 +1,49 @@
 {
     "products" : [
         {
-            "img" : "./src/assets/taza-1.jpg", 
+            "img" : "img/taza-1.jpg", 
             "title": "café vainilla", 
             "price": 15,
             "id": 122
         },
         {
-            "img" : "./src/assets/taza-2.jpg", 
+            "img" : "img/taza-2.jpg", 
             "title": "café canela", 
             "price": 15,
             "id": 133
         },
         {
-            "img" : "./src/assets/taza-3.jpg", 
+            "img" : "img/taza-3.jpg", 
             "title": "café ice cream", 
             "price": 15,
             "id": 144
         },
         {
-            "img" : "./src/assets/taza-4.jpg", 
+            "img" : "img/taza-4.jpg", 
             "title": "café vainilla", 
             "price": 15,
             "id": 155
         },
         {
-            "img" : "./src/assets/taza-5.jpg", 
+            "img" : "img/taza-5.jpg", 
             "title": "café canela", 
             "price": 15,
             "id": 166
         },
         {
-            "img" : "./src/assets/taza-6.jpg", 
+            "img" : "img/taza-6.jpg", 
             "title": "café ice cream", 
             "price": 15,
             "id": 177
         },
         {
-            "img" : "./src/assets/taza-7.jpg", 
+            "img" : "img/taza-7.jpg", 
             "title": "café canela", 
             "price": 15,
             "id": 188
         },
         {
-            "img" : "./src/assets/taza-8.jpg", 
+            "img" : "img/taza-8.jpg", 
             "title": "café ice cream", 
             "price": 15,
             "id": 199
